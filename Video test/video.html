@@ -8,9 +8,7 @@
 <body>
     <style>
         .section {
-            max-width:600px;
             padding: 0 14px;
-            margin: 0 auto;
         }
         .container {
             padding: 20px;
@@ -30,23 +28,29 @@
         <h3>Real video</h3>
         <div class="container">
             <div class="video">
-                <video src="builder-animation.mp4" muted autoplay loop></video>
+                <video src="builder-animation.mp4" muted loop id="v1"></video>
             </div>
         </div>
 
         <h3>Converted video 1</h3>
         <div class="container">
             <div class="video">
-                <video src="iphone.mp4" muted autoplay loop></video>
+                <video src="iphone.mp4" muted loop id="v2"></video>
             </div>
         </div>
 
         <h3>Converted video 2</h3>
         <div class="container">
             <div class="video">
-                <video src="iphone1.mp4" muted autoplay loop></video>
+                <video src="iphone1.mp4" muted loop id="v3"></video>
             </div>
         </div>
     </div>
+
+    <script>
+        setTimeout(() => document.getElementById('v1').play(), 100);
+        setTimeout(() => document.getElementById('v2').play(), 100);
+        setTimeout(() => document.getElementById('v3').play(), 100);
+    </script>
 </body>
 </html>
