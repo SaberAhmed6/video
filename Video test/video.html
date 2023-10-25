@@ -53,7 +53,7 @@
         document.getElementById('v1').addEventListener('canplay', function() {
           document.getElementById('v1').play();
         });
-        document.getElementById('v2')('autoplay', true)
+        document.getElementById('v2').setAttribute('autoplay', true)
         setTimeout(() => document.getElementById('v3').play(), 100);
     </script>
 </body>
