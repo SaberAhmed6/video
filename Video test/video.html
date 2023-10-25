@@ -44,17 +44,14 @@
         <h3>Converted video 2</h3>
         <div class="container">
             <div class="video">
-                <video src="iphone1.mp4" muted loop id="v3"></video>
+                <video src="iphone1.mp4" muted loop autoplay></video>
             </div>
         </div>
     </div>
 
     <script>
-        document.getElementById('v1').addEventListener('canplay', function() {
-          document.getElementById('v1').play();
-        });
+        document.getElementById('v1').play();
         document.getElementById('v2').setAttribute('autoplay', true)
-        setTimeout(() => document.getElementById('v3').play(), 100);
     </script>
 </body>
 </html>
