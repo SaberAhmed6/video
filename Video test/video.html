@@ -27,13 +27,6 @@
         }
     </style>
     <div class="section">
-        <h3>Real video</h3>
-        <div class="container">
-            <div class="video">
-                <video src="builder-animation.mp4" muted loop autoplay></video>
-            </div>
-        </div>
-
         <h3>Converted video 1</h3>
         <div class="container">
             <div class="video">
@@ -50,6 +43,9 @@
     </div>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          document.getElementById('v2').setAttribute('autoplay', true);
+        });
     </script>
 </body>
 </html>
