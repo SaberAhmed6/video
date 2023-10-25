@@ -8,6 +8,8 @@
 <body>
     <style>
         .section {
+            max-width: 600px;
+            margin: 0 auto;
             padding: 0 14px;
         }
         .container {
@@ -48,7 +50,14 @@
     </div>
 
     <script>
-        setTimeout(() => document.getElementById('v1').play(), 100);
+        document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            var video = document.getElementById('v1');
+            video.play().catch(function(error) {
+                console.error(error);
+            });
+        }, 1000);
+        });
         setTimeout(() => document.getElementById('v2').play(), 100);
         setTimeout(() => document.getElementById('v3').play(), 100);
     </script>
