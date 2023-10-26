@@ -39,13 +39,15 @@
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var video = document.getElementById("v1");
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-    // Clear the autoplay attribute
-    video.removeAttribute("autoplay");
-
-    setTimeout(function() {
-      video.play();
-    }, 2500); 
+    if (!isSafari) {
+        video.removeAttribute("autoplay");
+        
+        setTimeout(function() {
+          video.play();
+        }, 2500); 
+    }
   });
 </script>
 </body>
