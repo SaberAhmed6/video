@@ -40,9 +40,12 @@
   document.addEventListener("DOMContentLoaded", function() {
     var video = document.getElementById("v1");
 
+    // Clear the autoplay attribute
+    video.removeAttribute("autoplay");
+
     setTimeout(function() {
       video.play();
-    }, 5000); 
+    }, 2500); 
   });
 </script>
 </body>
